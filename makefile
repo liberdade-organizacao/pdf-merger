@@ -10,3 +10,7 @@ install:
 .PHONY: run
 run:
 	flask run
+
+.PHONY: test
+test:
+	python -m unittest

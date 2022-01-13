@@ -1,7 +1,14 @@
-from flask import Flask
+from flask import (
+    jsonify,
+    Flask,
+    request,
+    Response,
+)
+
+from merger import merge_pdf
 
 app = Flask(__name__)
 
-@app.route("/")
-def home_view():
-	return "Hello Joe!"
+@app.route("/merge")
+def merge():
+	pass
