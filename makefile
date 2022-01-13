@@ -1,4 +1,4 @@
-FLASK_APP = wsgi.py
+FLASK_APP=wsgi.py
 
 .PHONY: default
 default: run
@@ -14,3 +14,9 @@ run:
 .PHONY: test
 test:
 	python -m unittest
+
+.PHONY: load_test
+load_test:
+	# it's required to have the server running on the background to run
+	# these tests
+	cd tests; sh test_curl.sh
