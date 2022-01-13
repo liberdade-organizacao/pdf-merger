@@ -6,12 +6,14 @@ from flask import (
     request,
     send_file,
 )
+from flask_cors import CORS
 
 from app.utils import randomword
 from merger import merge_pdf
 
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/merge", methods=["POST"])
